@@ -10,9 +10,9 @@ def menu():
             break
 
 
-f = open('words.txt', 'r')
-words = list(f)
-f.close()
+file = open('words.txt', 'r')
+words = list(file)
+file.close()
 print('H A N G M A N')
 menu()
 correct_word = random.choice(words)
