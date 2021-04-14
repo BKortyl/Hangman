@@ -11,13 +11,16 @@ def menu():
 
 
 file = open('words.txt', 'r')
-words = list(file)
+raw_words = list(file)
+words = []
 file.close()
+for word in raw_words:
+    words.append(word.rstrip())
 print('H A N G M A N')
 menu()
 correct_word = random.choice(words)
 correct_set = set(correct_word)
-lives = 10
+lives = 30
 current_state = '-' * len(correct_word)
 attempted_letters = set()
 while lives > 0:
