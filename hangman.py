@@ -20,12 +20,13 @@ print('H A N G M A N')
 menu()
 correct_word = random.choice(words)
 correct_set = set(correct_word)
-lives = 30
+lives = 10
 current_state = '-' * len(correct_word)
 attempted_letters = set()
 while lives > 0:
     print()
     print(current_state)
+    print(f'Lives left: {lives}')
     letter = input('Input a letter: ')
     if letter in attempted_letters:
         print("You've already guessed this letter")
